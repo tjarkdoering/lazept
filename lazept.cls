@@ -9,12 +9,21 @@
 \usepackage{multicol}
 \usepackage{lmodern}
 \usepackage{textcomp}
+\usepackage{etoolbox}   % for booleans and much more
+\usepackage{verbatim}   % for the comment environment
 
 
 %% page layout
 
 \RequirePackage[left=2.2cm,right=2.2cm,top=2.2cm,bottom=2cm]{geometry}		% geometry
 \pagestyle{empty} 	% no pagenumbers
+
+%% intelligence
+
+% \newif\ifother
+% \othertrue % or \otherfalse
+% 
+% \newenvironment{test}{}{}
 
 %% for the name of the dish, subtitle, etc.
 
@@ -47,7 +56,7 @@
 
 \newenvironment{utensils}
 {\vspace{2ex}\par\noindent\textbf{Utensilien }\textcolor{PaleVioletRed3}{\hrulefill} \vspace{1ex}}
-{}
+{\othertrue}
 
 %% environment for pre-preparation
 
