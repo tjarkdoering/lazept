@@ -1,10 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lazept}[2015/12/16 Class for simple recipe formatting]
+\ProvidesClass{lazept}[2015/12/29 Class for simple recipe formatting]
 
 \LoadClass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel} 
+\usepackage[ngerman]{babel}
 \usepackage[x11names]{xcolor}
 \usepackage{multicol}
 \usepackage{lmodern}
