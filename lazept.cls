@@ -9,31 +9,34 @@
 \usepackage{multicol}
 \usepackage{lmodern}
 \usepackage{textcomp}
-\usepackage{etoolbox}   % for booleans and much more
-\usepackage{verbatim}   % for the comment environment
+\usepackage{fancyhdr}	% for fancy page styles
 
 
 %% page layout
 
 \RequirePackage[left=2.2cm,right=2.2cm,top=2.2cm,bottom=2cm]{geometry}		% geometry
-\pagestyle{empty} 	% no pagenumbers
 
-%% intelligence
+\pagestyle{fancy}	% fancy pagestlye
+\fancyhead{}		% clear all header fields
+\rhead{\thepage}	% pagenumbers
+\fancyfoot{}		% clear all footer fields
 
-% \newif\ifother
-% \othertrue % or \otherfalse
-% 
-% \newenvironment{test}{}{}
+\renewcommand{\headrule}{
+  {\color{PaleVioletRed3}%
+  \hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}
+}
 
-%% for the name of the dish, subtitle, etc.
 
+%% dish title and comment
 
 \newcommand{\dish}[2]{
+  \lhead{#1}
+  \thispagestyle{empty}	% no pagenumbers nad header on first page
   \noindent\huge{\textbf{#1}}
   \begin{flushright}
    \LARGE{\textit{#2}} \vspace{0.5cm} 
   \end{flushright}
-  \large		% commands following text sizw, ugly workaround?
+  \large		% commands following text size, ugly workaround?
 }
 
 
@@ -56,7 +59,7 @@
 
 \newenvironment{utensils}
 {\vspace{2ex}\par\noindent\textbf{Utensilien }\textcolor{PaleVioletRed3}{\hrulefill} \vspace{1ex}}
-{\othertrue}
+{}
 
 %% environment for pre-preparation
 
