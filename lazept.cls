@@ -10,6 +10,8 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{fancyhdr}	% for fancy page styles
+\usepackage{amsmath}
+
 
 
 %% page layout
